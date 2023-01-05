@@ -1,0 +1,14 @@
+#include: package:lint/strict.yaml
+include: package:flutter_lints/flutter.yaml
+linter:
+  rules:
+    avoid_print: false  
+
+analyzer:
+  exclude:
+      - "**/*.g.dart" #to support json_serializable w/o judgement
+      - "**/*.freezed.dart" #to support freezed w/o judgement
+      - "lib/l10n/**" 
+  errors:
+   invalid_assignment: false
+   argument_type_not_assignable: false

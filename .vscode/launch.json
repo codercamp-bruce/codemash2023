@@ -1,0 +1,168 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Level02",
+            "cwd": "Level02",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
+            "name": "Level02 (profile mode)",
+            "cwd": "Level02",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile"
+        },
+        {
+            "name": "Level02 (release mode)",
+            "cwd": "Level02",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "release"
+        },
+        {
+            "name": "Level03",
+            "cwd": "Level03",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
+            "name": "Level03 (profile mode)",
+            "cwd": "Level03",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile"
+        },
+        {
+            "name": "Level03 (release mode)",
+            "cwd": "Level03",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "release"
+        },
+        {
+            "name": "Level04",
+            "cwd": "Level04",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
+            "name": "Level04 (profile mode)",
+            "cwd": "Level04",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile"
+        },
+        {
+            "name": "Level04 (release mode)",
+            "cwd": "Level04",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "release"
+        },
+        {
+            "name": "Level05",
+            "cwd": "Level05",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
+            "name": "Level05 (profile mode)",
+            "cwd": "Level05",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile"
+        },
+        {
+            "name": "Level05 (release mode)",
+            "cwd": "Level05",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "release"
+        },
+        {
+            "name": "Level06",
+            "cwd": "Level06",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
+            "name": "Level06 (profile mode)",
+            "cwd": "Level06",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile"
+        },
+        {
+            "name": "Level06 (release mode)",
+            "cwd": "Level06",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "release"
+        },
+        {
+            "name": "Level07",
+            "cwd": "Level07",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
+            "name": "Level07 (profile mode)",
+            "cwd": "Level07",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile"
+        },
+        {
+            "name": "Level07 (release mode)",
+            "cwd": "Level07",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "release"
+        },
+        {
+            "name": "LevelsCompleted",
+            "cwd": "LevelsCompleted",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
+            "name": "LevelsCompleted (profile mode)",
+            "cwd": "LevelsCompleted",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile"
+        },
+        {
+            "name": "LevelsCompleted (release mode)",
+            "cwd": "LevelsCompleted",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "release"
+        },
+        {
+            "name": "fcode101",
+            "cwd": "fcode101",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
+            "name": "fcode101 (profile mode)",
+            "cwd": "fcode101",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile"
+        },
+        {
+            "name": "fcode101 (release mode)",
+            "cwd": "fcode101",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "release"
+        }
+    ]
+}

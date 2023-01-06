@@ -5,38 +5,38 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "level02",
-            "cwd": "level02",
+            "name": "level2",
+            "cwd": "level2",
             "request": "launch",
             "type": "dart"
         },
         {
-            "name": "level03",
-            "cwd": "level03",
+            "name": "level3",
+            "cwd": "level3",
             "request": "launch",
             "type": "dart"
         },
         {
-            "name": "level04",
-            "cwd": "level04",
+            "name": "level4",
+            "cwd": "level4",
             "request": "launch",
             "type": "dart"
         },
         {
-            "name": "level05",
-            "cwd": "level05",
+            "name": "level5",
+            "cwd": "level5",
             "request": "launch",
             "type": "dart"
         },
         {
-            "name": "level06",
-            "cwd": "level06",
+            "name": "level6",
+            "cwd": "level6",
             "request": "launch",
             "type": "dart"
         },
         {
-            "name": "level07",
-            "cwd": "level07",
+            "name": "level7",
+            "cwd": "level7",
             "request": "launch",
             "type": "dart"
         },

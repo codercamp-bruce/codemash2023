@@ -6,6 +6,7 @@ class SearchScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final theme = Theme.of(context);
     return Scaffold(
       appBar: AppBar(
         title: const Text('Search'),
@@ -13,7 +14,11 @@ class SearchScreen extends StatelessWidget {
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
-          const Text('Search for Games'),
+          Text('Search for Games',
+              style: TextStyle(
+                fontSize: 24,
+                color: theme.colorScheme.onPrimary,
+              )),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [

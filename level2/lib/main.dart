@@ -18,11 +18,11 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     const usedTone = FlexTonesEnum.custom;
-    const bool useSecondaryKey = true; // true to use secondary color
-    const bool useTertiaryKey = true; // true to use tertiary color
+    const bool useSecondaryKey = false; // true to use secondary color
+    const bool useTertiaryKey = false; // true to use tertiary color
     const bool keepAllOnColorsBW =
-        false; // false to have non-white background, non-black text
-    const bool useMaterial3 = true;
+        true; // false to have non-white background, non-black text
+    const bool useMaterial3 = false;
     final textTheme = Theme.of(context).textTheme;
     // final textTheme =
     //     GoogleFonts.balsamiqSansTextTheme(Theme.of(context).textTheme);

@@ -30,12 +30,15 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            const Text(
+            Text(
               'You have pushed the button this many times:',
+              style: theme.textTheme.bodyMedium!
+                  .copyWith(color: theme.colorScheme.onPrimary),
             ),
             Text(
               '$_counter',
-              style: Theme.of(context).textTheme.headlineMedium,
+              style: theme.textTheme.headlineMedium!
+                  .copyWith(color: theme.colorScheme.onPrimary),
             ),
           ],
         ),

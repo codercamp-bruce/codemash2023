@@ -41,63 +41,26 @@ class _BGAtlasApi implements BGAtlasApi {
   String? baseUrl;
 
   @override
-  Future<BGAGameSearchResponse> nameSearch(
-    name, {
-    limit,
-    fields,
-    skip,
-    fuzzyMatch,
-    options,
-  }) async {
+  Future<BGAGameSearchResponse> nameSearch(name) async {
     const _extra = <String, dynamic>{};
-    final queryParameters = <String, dynamic>{
-      r'name': name,
-      r'limit': limit,
-      r'fields': fields,
-      r'skip': skip,
-      r'fuzzy_match': fuzzyMatch,
-    };
-    queryParameters.removeWhere((k, v) => v == null);
+    final queryParameters = <String, dynamic>{r'name': name};
     final _headers = <String, dynamic>{};
     final _data = <String, dynamic>{};
-    final newOptions = newRequestOptions(options);
-    newOptions.extra.addAll(_extra);
-    newOptions.headers.addAll(_dio.options.headers);
-    newOptions.headers.addAll(_headers);
-    final _result = await _dio.fetch<Map<String, dynamic>>(newOptions.copyWith(
+    final _result = await _dio.fetch<Map<String, dynamic>>(
+        _setStreamType<BGAGameSearchResponse>(Options(
       method: 'GET',
-      baseUrl: baseUrl ?? _dio.options.baseUrl,
-      queryParameters: queryParameters,
-      path: '/search',
-    )..data = _data);
-    final value =
-        await compute(deserializeBGAGameSearchResponse, _result.data!);
+      headers: _headers,
+      extra: _extra,
+    )
+            .compose(
+              _dio.options,
+              '/search',
+              queryParameters: queryParameters,
+              data: _data,
+            )
+            .copyWith(baseUrl: baseUrl ?? _dio.options.baseUrl)));
+    final value = BGAGameSearchResponse.fromJson(_result.data!);
     return value;
-  }
-
-  RequestOptions newRequestOptions(Object? options) {
-    if (options is RequestOptions) {
-      return options as RequestOptions;
-    }
-    if (options is Options) {
-      return RequestOptions(
-        method: options.method,
-        sendTimeout: options.sendTimeout,
-        receiveTimeout: options.receiveTimeout,
-        extra: options.extra,
-        headers: options.headers,
-        responseType: options.responseType,
-        contentType: options.contentType.toString(),
-        validateStatus: options.validateStatus,
-        receiveDataWhenStatusError: options.receiveDataWhenStatusError,
-        followRedirects: options.followRedirects,
-        maxRedirects: options.maxRedirects,
-        requestEncoder: options.requestEncoder,
-        responseDecoder: options.responseDecoder,
-        path: '',
-      );
-    }
-    return RequestOptions(path: '');
   }
 
   RequestOptions _setStreamType<T>(RequestOptions requestOptions) {
@@ -141,7 +104,7 @@ class _SystemHash {
   }
 }
 
-String _$bgaGamesByNameGenHash() => r'1849146f0ca5b1c30da8e3ba14ae5eebfcadff3a';
+String _$bgaGamesByNameGenHash() => r'206edfefcb9274799086eee7ef96dcbe61a8bef2';
 
 /// See also [bgaGamesByNameGen].
 class BgaGamesByNameGenProvider extends AutoDisposeFutureProvider<List<Game>?> {
@@ -211,7 +174,7 @@ class BgaGamesByNameGenFamily extends Family<AsyncValue<List<Game>?>> {
   String? get name => r'bgaGamesByNameGenProvider';
 }
 
-String _$bgaApiHash() => r'cef972bcc141bf85c1d36c67fb4d27ed79e18dfc';
+String _$bgaApiHash() => r'fa7da4c6ccf4ec3e146b86e219a77a10c62b9d12';
 
 /// See also [bgaApi].
 final bgaApiProvider = AutoDisposeProvider<BGAtlasApi>(

@@ -1,6 +1,7 @@
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:cm23mp/models/game.dart';
+import 'package:cm23mp/widgets/game_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_widget_from_html/flutter_widget_from_html.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -15,6 +16,7 @@ class GameDetailsCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final textTheme = Theme.of(context).textTheme;
     return Card(
       elevation: 5,
       child: Padding(
@@ -44,16 +46,7 @@ class GameDetailsCard extends StatelessWidget {
                   ],
                 ),
               ),
-              if (game.imageUrl != null)
-                CachedNetworkImage(
-                  httpHeaders: const {'Access-Control-Allow-Origin': '*'},
-                  height: 50,
-                  imageUrl:
-                      game.corsImageUrl ?? "http://via.placeholder.com/350x150",
-                  placeholder: (context, url) =>
-                      const CircularProgressIndicator(),
-                  errorWidget: (context, url, error) => const Icon(Icons.error),
-                ),
+              if (game.imageUrl != null) GameImage(game: game),
               Padding(
                 padding: const EdgeInsets.fromLTRB(5, 20, 5, 30),
                 child: HtmlWidget(
@@ -61,8 +54,21 @@ class GameDetailsCard extends StatelessWidget {
                 ),
               ),
               const SizedBox(
-                height: 30,
-              )
+                height: 10,
+              ),
+              if (game.players != null)
+                Text(
+                  game.players!,
+                  style: textTheme.headlineSmall,
+                ),
+              const SizedBox(
+                height: 10,
+              ),
+              if (game.playtime != null)
+                Text(
+                  game.playtime!,
+                  style: textTheme.headlineSmall,
+                ),
             ],
           ),
         ),

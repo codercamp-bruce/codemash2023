@@ -2,14 +2,15 @@ include: package:lint/strict.yaml
 
 linter:
   rules:
-    avoid_print: false  
+    avoid_print: false
 
 analyzer:
   exclude:
-      - "**/*.g.dart" #to support json_serializable w/o judgement
-      - "**/*.freezed.dart" #to support freezed w/o judgement
-      - "lib/l10n/**" 
+    - "**/*.g.dart" #to support json_serializable w/o judgement
+    - "**/*.freezed.dart" #to support freezed w/o judgement
+    - "lib/l10n/**"
   errors:
-   invalid_assignment: false
-   argument_type_not_assignable: false
-   invalid_annotation_target: false
+    invalid_assignment: false
+    argument_type_not_assignable: false
+    invalid_annotation_target: false
+    included_file_warning: false

@@ -19,17 +19,20 @@ class SearchScreen extends StatelessWidget {
                 fontSize: 24,
                 color: theme.colorScheme.onPrimary,
               )),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              const Expanded(
-                child: TextField(),
-              ),
-              ElevatedButton(
-                onPressed: () {},
-                child: const Text('Search'),
-              ),
-            ],
+          Padding(
+            padding: const EdgeInsets.fromLTRB(25, 0, 25, 0),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                const Expanded(
+                  child: TextField(),
+                ),
+                ElevatedButton(
+                  onPressed: () {},
+                  child: const Text('Search'),
+                ),
+              ],
+            ),
           ),
         ],
       ),

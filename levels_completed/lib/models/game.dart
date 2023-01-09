@@ -25,10 +25,12 @@ class Game with _$Game {
 
   String? get corsImageUrl =>
       imageUrl != null ? getCORSProxyImageUri(imageUrl!) : null;
-  String get players => (minPlayers != null && maxPlayers != null)
-      ? '$minPlayers - $maxPlayers'
-      : '?';
-  String get playtime => (minPlaytime != null && maxPlaytime != null)
-      ? '$minPlaytime - $maxPlaytime'
-      : '?';
+  String? get players => (minPlayers != null && maxPlayers != null)
+      ? 'Players: $minPlayers - $maxPlayers'
+      : null;
+  String? get playtime => (minPlaytime != null && maxPlaytime != null)
+      ? minPlaytime == maxPlaytime
+          ? 'Playtime (minutes): $minPlaytime'
+          : 'Playtime (minutes): $minPlaytime - $maxPlaytime'
+      : null;
 }

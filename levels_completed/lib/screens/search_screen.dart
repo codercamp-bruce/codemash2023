@@ -12,6 +12,7 @@ class SearchScreen extends HookConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final searchController = useTextEditingController();
+    final theme = Theme.of(context);
     return Scaffold(
       appBar: AppBar(
         title: const Text('Search'),
@@ -27,28 +28,34 @@ class SearchScreen extends HookConsumerWidget {
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
-          const Text('Search for Games'),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Expanded(
-                child: TextField(
-                  controller: searchController,
-                  decoration: const InputDecoration(
-                    hintText: 'Search',
+          Text(
+            'Search for Games',
+            style: theme.textTheme.titleLarge,
+          ),
+          Padding(
+            padding: const EdgeInsets.fromLTRB(25, 0, 25, 0),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Expanded(
+                  child: TextField(
+                    controller: searchController,
+                    decoration: const InputDecoration(
+                      hintText: 'Search',
+                    ),
                   ),
                 ),
-              ),
-              ElevatedButton(
-                onPressed: () {
-                  context.push(
-                    RoutesEnum.searchResults.routePath
-                        .replaceAll(':search', searchController.text),
-                  );
-                },
-                child: const Text('Search'),
-              ),
-            ],
+                ElevatedButton(
+                  onPressed: () {
+                    context.push(
+                      RoutesEnum.searchResults.routePath
+                          .replaceAll(':search', searchController.text),
+                    );
+                  },
+                  child: const Text('Search'),
+                ),
+              ],
+            ),
           ),
         ],
       ),

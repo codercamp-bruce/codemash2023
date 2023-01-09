@@ -41,8 +41,8 @@
             "type": "dart"
         },
         {
-            "name": "levelsCompleted",
-            "cwd": "levelsCompleted",
+            "name": "levels_completed",
+            "cwd": "levels_completed",
             "request": "launch",
             "type": "dart"
         },
